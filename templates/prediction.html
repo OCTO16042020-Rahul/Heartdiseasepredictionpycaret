@@ -1,0 +1,189 @@
+{% extends 'header.html'%}
+{% block content %}
+
+
+</div>
+<div class="w3ls-banner">
+	<div class="heading">
+		<h1>Prediction</h1>
+	</div>
+		<div class="container_1">
+			<div class="heading">
+				<h2>Please Enter Details for Prediction</h2>
+			</div>
+			<div class="agile-form">
+				<form action="/predict" method="POST">
+					<ul class="field-list">
+						<li>
+							<label class="form-label">
+								Age
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" name="age" placeholder="Enter age" required >
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+							   Gender
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="gender" required>
+									<option value="">Select gender&nbsp;</option>
+									<option value="0"> Male </option>
+									<option value="1"> Female </option>
+								</select>
+							</div>
+						<li>
+                        <li>
+							<label class="form-label">
+							   Chest Pain
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="cp" required>
+									<option value=""> Select Chest Pain&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+									<option value="3"> 3 </option>
+								</select>
+							</div>
+						<li>
+                        <li>
+							<label class="form-label">
+								Resting Blood Pressure
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="number" name="trestbps" placeholder="Enter trestbps" min="94" max="200" required >
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+								Cholesterol
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="number" name="chol" placeholder="Enter Cholesterol" min="126" max="564" required >
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+							   Fasting Blood sugar
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="fbs" required>
+									<option value="">Select FBS&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+								</select>
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+							   Rest ECG
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="restecg" required>
+									<option value="">Select Rest ECG&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+
+								</select>
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+								Thalach
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="number" name="thalach" placeholder="Enter Thalach" min="71" max="202" required>
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+							   exang
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="exang" required>
+									<option value="">Select exang&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+								</select>
+							</div>
+						</li>
+
+                        <li>
+							<label class="form-label">
+							   Slope
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="slope" required>
+									<option value="">Select slope&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+								</select>
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+								Oldpic site
+								<span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<input type="text" name="oldpik" placeholder="Enter oldpik"  required >
+							</div>
+						</li>
+
+                         <li>
+							<label class="form-label">
+							   Cancer
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="ca" required>
+									<option value="">Select CA&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+								</select>
+							</div>
+						</li>
+                        <li>
+							<label class="form-label">
+							    ALPHA-THAL
+							   <span class="form-required"> * </span>
+							</label>
+							<div class="form-input">
+								<select class="form-dropdown" name="thal" required>
+									<option value="">Select ALPHA-THAL&nbsp;</option>
+									<option value="0"> 0 </option>
+									<option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+								</select>
+							</div>
+						</li>
+                        <li>
+							
+							</div>
+						</li>
+					</ul>
+					<input type="submit" value="PREDICT">
+				</form>
+			</div>
+		</div>
+</div>
+
+{% endblock %}
